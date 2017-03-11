@@ -1,0 +1,28 @@
+## Configuration Apache
+
+web:
+   restart: always
+   build: php7
+   ports:
+      - "80:80"
+   volumes:
+      - /Users/IOOSUR/Docker/stack-web/www:/var/www
+   environment:
+     - ENVIRONMENT=docker
+   links:
+      - mariadb:mariadb
+      - maildev:maildev
+
+mariadb:
+   restart: always
+   image: mariadb:latest
+   volumes:
+     - /Users/IOOSUR/Docker/database/mariadb:/var/lib/mysql
+   environment:
+     - MYSQL_ROOT_PASSWORD=root
+
+maildev:
+   restart: always
+   image: djfarrelly/maildev
+   ports:
+   - "1080:80"
