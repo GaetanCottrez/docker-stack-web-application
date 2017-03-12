@@ -5,6 +5,7 @@
 
 - First ! Open the file docker-compose.yml and custom the link volume for the container web and the container mariadb
 - You need to specify your folder with your workspace as well as the folder that will contain the files in your database
+- Edit the file xdebug.ini and add your local address on your network for this line : xdebug.remote_host
 - And... that's all ;-)!
 
 ##Build image php7
