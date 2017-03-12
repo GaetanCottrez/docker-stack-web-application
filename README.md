@@ -14,4 +14,4 @@
 
 ##Launch this stack
 
-- Two possibility : run the docker-composer up -d command or start the docker-compose shell that contains the docker-compose -d and the following line: socat TCP-LISTEN:2375,reuseaddr,fork,bind=localhost UNIX-CONNECT:/var/run/docker.sock that opens the docker API for use in an IDE like phpstorm
+- Two possibility : run the docker-composer up -d command or start the docker-compose shell that contains the docker-compose -d and the following line: socat TCP-LISTEN:2375,reuseaddr,fork,bind=localhost UNIX-CONNECT:/var/run/docker.sock that opens the docker API for use in an IDE like phpstorm (but before you need to install socat)
